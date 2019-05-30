@@ -1,0 +1,21 @@
+/* 
+ * Social Account List styles
+ */
+
+ .social-list {
+   display: flex;
+   margin-bottom: 1rem;
+
+    .social {
+      margin-right: $global-margin/2;
+
+      a {
+        color: inherit;
+        svg {
+          fill: currentColor;
+          width: 1.5rem;
+          height: auto;
+        }
+      }
+    }
+ }

@@ -1,0 +1,115 @@
+// Color system
+
+$white:    #fff !default;
+$gray-100: #E1E2E5 !default;
+$gray-200: #BEC4CF !default;
+$gray-300: #97A6BE !default;
+$gray-400: #6C85B1 !default;
+$gray-500: #3D64A8 !default;
+$gray-600: #143876 !default;
+$gray-700: #182C4F !default;
+$gray-800: #161F2F !default;
+$gray-900: #0E1014 !default;
+$black:    #000000 !default;
+
+// $grays: () !default;
+// // stylelint-disable-next-line scss/dollar-variable-default
+// $grays: map-merge(
+//   (
+//     "100": $gray-100,
+//     "200": $gray-200,
+//     "300": $gray-300,
+//     "400": $gray-400,
+//     "500": $gray-500,
+//     "600": $gray-600,
+//     "700": $gray-700,
+//     "800": $gray-800,
+//     "900": $gray-900
+//   ),
+//   $grays
+// );
+
+$blue:    c !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+// $colors: map-merge(
+//   (
+//     "blue":       $blue,
+//     "indigo":     $indigo,
+//     "purple":     $purple,
+//     "pink":       $pink,
+//     "red":        $red,
+//     "orange":     $orange,
+//     "yellow":     $yellow,
+//     "green":      $green,
+//     "teal":       $teal,
+//     "cyan":       $cyan,
+//     "white":      $white,
+//     "gray":       $gray-600,
+//     "gray-dark":  $gray-800
+//   ),
+//   $colors
+
+//http://colorpalette.glyphix.com/?n=white&n=light&n=primary&n=secondary&n=accent%201&n=accent%202&n=dark&n=black&v=FFFFFF&v=EBEBEB&v=F967CD&v=45D045&v=FAE44C&v=77AEFA&v=2A3444&v=000000
+
+$primary:       #F983D1 !default;
+$secondary:     #45D045 !default;
+$accent-1:      #FAE44C;
+$accent-2:       #77AEFA;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         #EBEBEB !default;
+$dark:          #22365D !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "accent":     $accent-1,
+    "accent2":     $accent-2,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "white":      $white,
+    "black":      $black,
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:             $gray-900 !default;
+$yiq-text-light:            $white !default;
+
+@import "theme-color-schemes";

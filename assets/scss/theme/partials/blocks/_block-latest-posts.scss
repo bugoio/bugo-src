@@ -1,0 +1,214 @@
+/* 
+ * Latest Posts Block styles
+ */
+
+.block-latest-posts {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(md){
+      flex-wrap: nowrap;
+    }
+
+    .item {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 100%;
+      padding: $global-padding $global-padding/2 0;
+
+      @include media-breakpoint-up(sm){
+        flex-basis: 100%;
+      }
+
+      // &:first-child(){
+      //   padding-left: 0;
+      // }
+
+      // &:last-child(){
+      //   padding-right: 0;
+      // }
+
+      article {
+        flex-direction: column;
+
+        header {
+          h3 {
+            text-transform: none;
+
+            @include media-breakpoint-up(lg){
+              font-size: $h3-font-size;
+            }
+          }
+        }
+      }
+
+      .btn {
+        margin-top: $global-margin;
+      }
+
+      figure {
+        color: theme-color(primary);
+
+        figcaption {
+          @extend .sr-only;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    .latest-posts-2 {
+      @include media-breakpoint-up(md){
+        .item {
+          flex-basis: 50%;
+        }
+      }
+    }
+
+    .latest-posts-3 {
+      @include media-breakpoint-up(md){
+        .item {
+          flex-basis: 33%;
+        }
+      }
+    }
+
+    .latest-posts-4 {
+      @include media-breakpoint-up(md){
+        .item {
+          flex-basis: 33%;
+
+          &:first-child {
+            flex-basis: 100%;
+            padding-bottom: $global-padding;
+            border-bottom: 1px solid $light;
+            h3 {
+              font-size: $h2-font-size;
+            }
+          }
+        }
+      }
+      @include media-breakpoint-up(lg){
+        .item {
+          flex-basis: 25%;
+
+          &:first-child {
+            flex-basis: 25%;       
+            h3 {
+              font-size: $h3-font-size;
+            }
+          }
+        }
+      }
+    }
+
+    .latest-posts-5 {
+      @include media-breakpoint-up(md){
+        .item {
+          flex-basis: 33%;
+
+          &:first-child,
+          &:nth-child(2) {
+            flex-basis: 50%;
+            padding-bottom: $global-padding;
+            border-bottom: 1px solid $light;
+            h3 {
+              font-size: $h2-font-size;
+            }
+          }
+        }
+      }
+
+      @include media-breakpoint-up(lg){
+        .item {
+          flex-basis: 25%;
+
+          &:first-child {
+            flex-basis: 100%;
+            padding-bottom: $global-padding;
+            border-bottom: 1px solid $light;
+          }
+
+          &:nth-child(2) {
+            flex-basis: 25%;
+            h3 {
+              font-size: $h3-font-size;
+            }
+          }
+        }
+      }
+
+
+      @include media-breakpoint-up(xl){
+        .item {
+          flex-basis: 20%;
+
+          &:first-child,
+          &:nth-child(2) {
+            flex-basis: 20%;       
+            h3 {
+              font-size: $h3-font-size;
+            }
+          }
+        }
+      }
+    }
+
+    .latest-posts-6 {
+      @include media-breakpoint-up(md){
+        .item {
+          flex-basis: 50%;
+
+          &:first-child,
+          &:nth-child(2) {
+            flex-basis: 50%;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(lg){
+        .item {
+          flex-basis: 33%;
+
+          &:first-child,
+          &:nth-child(2) {
+            flex-basis: 33%;
+            padding-bottom: 0;
+            border: none;
+
+            h3 {
+              font-size: $h3-font-size;
+            }
+          }
+        }
+      }
+
+
+      @include media-breakpoint-up(xl){
+        .item {
+          flex-basis: 25%;
+
+          &:first-child, 
+          &:nth-child(2) {
+            flex-basis: 50%;       
+            padding-bottom: $global-padding;
+            border-bottom: 1px solid $light;
+            h3 {
+              font-size: $h2-font-size;
+            }            h3 {
+              font-size: $h2-font-size;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

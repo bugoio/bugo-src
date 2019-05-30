@@ -1,0 +1,48 @@
+/* 
+ * logos Block styles
+ */
+
+.block-logos {
+  .logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-up(lg){
+      flex-basis: 0;
+      flex-wrap: nowrap;
+    }
+
+    .item {
+      padding: $global-padding/2;
+      display: block;
+      text-align: center;
+      flex-basis: 100%;
+      margin-bottom: $global-margin;
+
+      @include media-breakpoint-up(sm){
+        flex-basis: 50%;
+        margin-bottom: 0;
+      }
+
+      @include media-breakpoint-up(lg){
+        flex-basis: auto;
+        margin-bottom: 0;
+      }
+
+        img {
+        display: inline-block;
+        max-width: 75%;
+        height: auto;
+        max-height: 100px;
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(lg){
+          max-width: 75%;
+          max-height: 150px;
+        }
+      }
+    }
+  }
+}

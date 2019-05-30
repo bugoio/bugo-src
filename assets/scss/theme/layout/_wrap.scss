@@ -1,0 +1,47 @@
+/* 
+ * Boostrap .wrap styles
+ */
+
+.wrap{
+  &.container {
+    display: flex;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+.sidebar {
+  .wrap{
+    &.container {
+      flex-wrap: wrap;
+    }
+  }
+
+  main {
+    width: 100%;
+
+    // @include media-breakpoint-up(md){
+    //   width: 70%;
+    // }
+
+    @include media-breakpoint-up(lg){
+      width: 66%;
+    }
+  }
+
+  aside{
+    width: 100%;
+
+    // @include media-breakpoint-up(md){
+    //   width: 30%;
+    //   padding-left: $global-margin;
+    // }
+
+    @include media-breakpoint-up(lg){
+      width: 33%;
+      padding-left: $global-margin;
+    }
+  }
+}

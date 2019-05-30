@@ -1,0 +1,23 @@
+/* 
+ * Share button styles
+ * 
+ * Displays the Hugo menu named copyright
+ *
+ */
+ 
+ .share-buttons {
+  display: none; //display flex when you want to show this
+  width: 20vw;
+
+  a {
+    display: block;
+    flex-grow: 1;
+    color: inherit;
+
+    .icon {
+      fill: currentColor;
+      width: 2rem !important;
+      height: auto;
+    }
+  }
+}

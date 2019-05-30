@@ -1,0 +1,48 @@
+/* 
+ * Breadcrumb styles
+ */
+
+// $breadcrumbs-margin: 0;
+// $breadcrumbs-padding: 0;
+// $breadcrumbs-background-color: transparent;
+
+.breadcrumbs {
+  margin: $breadcrumbs-margin;
+  padding: $breadcrumbs-padding;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  background-color: $breadcrumbs-bg-color;
+  padding: $breadcrumbs-ol-padding
+}
+
+.breadcrumb-item {
+
+  &::before {
+    content: $breadcrumbs-separator !important;
+  }
+
+  &:first-child {
+    &::before {
+      display: none;
+    }
+  }
+
+  &.active {
+    color: $breadcrumb-active-color;
+  }
+
+  a {
+    color: $breadcrumbs-link-color;
+    background-color: $breadcrumbs-link-bg;
+    padding: 2px 4px;
+
+    &:hover,
+    &:focus {
+      text-decoration: $breadcrumbs-link-hover-decoration;
+      color: $breadcrumbs-link-hover;
+      background-color: $breadcrumbs-link-hover-bg;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+#mobile-nav-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $mobile-nav-bg-color;
+  margin: 0;
+
+  ul {
+    margin: 0;
+  }
+}
+
+nav.nav-mobile {
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+
+  .nav-link {
+    color: $mobile-nav-link-color;
+    font-size: $mobile-nav-font-size;
+
+    &:hover,
+    &:focus {
+      color: $mobile-nav-link-hover;
+    }
+  }
+}
