@@ -1,0 +1,41 @@
+---
+label: Config -  Organization Contact Information
+hide_body: false
+fields:
+- type: field_group
+  name: contact_info
+  label: Contact Info
+  fields:
+  - type: include
+    name: email
+    label: Email
+    template: site-contact-information
+  description: 'Email & Phones for this website. Alternative: You can associate email
+    and phones with a location instead.'
+- type: field_group
+  name: social_accounts
+  label: Social Accounts
+  fields:
+  - type: include
+    name: social_accounts
+    label: Social Accounts
+    template: data-social-accounts
+  description: For display on the website.
+- type: field_group_list
+  name: locations
+  label: Locations
+  description: For display on the website. These will display in the order below.
+    You can rearrange them as needed.
+  fields:
+  - type: text
+    name: location_name
+    label: Location Name
+    description: Some themes display this with the address
+  - type: include
+    name: address
+    label: Address
+    template: data-address
+  - type: include
+    template: data-contact-info
+  config:
+    labelField: location_name

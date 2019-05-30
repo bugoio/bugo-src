@@ -1,0 +1,23 @@
+---
+label: Block - Logos
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: logos
+  type: image_gallery
+  config: {}
+  label: Logos
+- name: block_options
+  type: field_group
+  config: {}
+  fields:
+  - name: block_options
+    type: include
+    config: {}
+    template: field-block-options
+    label: Block Options
+  label: Block Options

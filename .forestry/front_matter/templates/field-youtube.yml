@@ -1,0 +1,26 @@
+---
+label: Field - YouTube
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: youtube_video_id
+  label: YouTube Video ID
+  description: Find the video on YouTube. Click "SHARE". The ID is the end of the
+    URL. https://youtu.be/XXXXXXXXXXX
+  config:
+    required: true
+- type: textarea
+  name: description
+  label: Description
+  config:
+    wysiwyg: false
+    schema:
+      format: markdown
+- type: file
+  name: video_thumbnail
+  label: Video Thumbnail

@@ -1,0 +1,259 @@
+---
+label: Bugo Config
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Site Title
+  config:
+    required: true
+  default: Bugo
+- type: textarea
+  name: description
+  config:
+    required: true
+  default: ''
+  label: Site Description
+- type: text
+  name: baseURL
+  label: Base URL
+  config:
+    required: true
+  default: "/"
+- type: number
+  name: summaryLength
+  label: Summary Length
+  description: How many words are displayed in a summary.
+  config:
+    required: true
+    min: '15'
+    max: '100'
+  default: '35'
+- type: number
+  name: paginate
+  label: Pagination
+  description: How many posts or pages get are listed on list pages.
+- type: text
+  name: googleAnalytics
+  label: Google Analytics
+  description: Add your Google Analytics ID to start tracking this site. (optional)
+- type: field_group
+  name: menu
+  fields:
+  - type: field_group_list
+    name: main
+    label: Main Menu
+    fields:
+    - type: text
+      name: identifier
+      label: Identifier
+      config:
+        required: true
+    - type: text
+      name: title
+      label: Title
+      config:
+        required: true
+    - type: text
+      name: name
+      label: Name
+      config:
+        required: true
+    - type: text
+      name: url
+      label: Url
+      config:
+        required: true
+    - type: number
+      name: weight
+      label: Weight
+    - type: text
+      name: pre
+      label: Pre Content
+      description: Content before the name. Sometime used for icons. (optional)
+    - type: text
+      name: post
+      label: Post Content
+      description: Content after the name. Sometime used for icons. (optional)
+    - name: parent
+      type: text
+      config:
+        required: false
+      label: Parent
+      description: Name of the parent menu item.
+    config:
+      labelField: name
+    description: 'NOTE: The order here does not apply. Add weight to menu items to
+      order them.'
+  - type: field_group_list
+    name: secondary
+    label: Secondary
+    fields:
+    - type: text
+      name: identifier
+      label: Identifier
+      config:
+        required: true
+    - type: text
+      name: title
+      label: Title
+      config:
+        required: true
+    - type: text
+      name: name
+      label: Name
+      config:
+        required: true
+    - type: text
+      name: url
+      label: Url
+      config:
+        required: true
+    - type: number
+      name: weight
+      label: Weight
+    - type: text
+      name: pre
+      label: Pre Content
+      description: Content before the name. Sometime used for icons. (optional)
+    - type: text
+      name: post
+      label: Post Content
+      description: Content after the name. Sometime used for icons. (optional)
+    description: 'NOTE: The order here does not apply. Add weight to menu items to
+      order them.'
+  - type: field_group_list
+    name: mobile
+    label: Mobile
+    fields:
+    - type: text
+      name: identifier
+      label: Identifier
+      config:
+        required: true
+    - type: text
+      name: title
+      label: Title
+      config:
+        required: true
+    - type: text
+      name: name
+      label: Name
+      config:
+        required: true
+    - type: text
+      name: url
+      label: Url
+      config:
+        required: true
+    - type: number
+      name: weight
+      label: Weight
+    - type: text
+      name: pre
+      label: Pre Content
+      description: Content before the name. Sometime used for icons. (optional)
+    - type: text
+      name: post
+      label: Post Content
+      description: Content after the name. Sometime used for icons. (optional)
+    config:
+      labelField: identifier
+    description: 'NOTE: The order here does not apply. Add weight to menu items to
+      order them.'
+  - type: field_group_list
+    name: footer
+    label: Footer
+    fields:
+    - type: text
+      name: identifier
+      label: Identifier
+      config:
+        required: true
+    - type: text
+      name: title
+      label: Title
+      config:
+        required: true
+    - type: text
+      name: name
+      label: Name
+      config:
+        required: true
+    - type: text
+      name: url
+      label: Url
+      config:
+        required: true
+    - type: number
+      name: weight
+      label: Weight
+    - type: text
+      name: pre
+      label: Pre Content
+      description: Content before the name. Sometime used for icons. (optional)
+    - type: text
+      name: post
+      label: Post Content
+      description: Content after the name. Sometime used for icons. (optional)
+    config:
+      labelField: identifier
+    description: 'NOTE: The order here does not apply. Add weight to menu items to
+      order them.'
+  - type: field_group_list
+    name: privacy
+    label: Privacy
+    fields:
+    - type: text
+      name: identifier
+      label: Identifier
+      config:
+        required: true
+    - type: text
+      name: title
+      label: Title
+      config:
+        required: true
+    - type: text
+      name: name
+      label: Name
+      config:
+        required: true
+    - type: text
+      name: url
+      label: Url
+      config:
+        required: true
+    - type: number
+      name: weight
+      label: Weight
+    - type: text
+      name: pre
+      label: Pre Content
+      description: Content before the name. Sometime used for icons. (optional)
+    - type: text
+      name: post
+      label: Post Content
+      description: Content after the name. Sometime used for icons. (optional)
+    description: 'NOTE: The order here does not apply. Add weight to menu items to
+      order them.'
+  label: Menus
+  description: Populate menus with pages. Use this over the forestry.io Menu system.
+- type: boolean
+  name: enableEmoji
+  label: Enable Emojis
+  description: Enable Emoji emoticons support for page content; see the Emoji Cheat
+    Sheet. https://www.webpagefx.com/tools/emoji-cheat-sheet/
+- type: boolean
+  name: enableInlineShortcodes
+  label: Enable Inline Shortcodes
+- type: boolean
+  name: enablerobotstxt
+  label: Enable robots.txt
+  description: Enable generation of robots.txt file for SEO purposes.
+- type: list
+  name: theme
+  label: Themes
+  description: Add the directory name of themes here.
+pages:
+- config.yaml

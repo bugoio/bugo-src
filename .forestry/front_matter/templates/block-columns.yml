@@ -1,0 +1,73 @@
+---
+label: Block - Columns
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Giving this block title will help organization.
+  config:
+    required: true
+- type: field_group_list
+  name: columns
+  label: Columns
+  description: Add up to 4 columns in this block
+  fields:
+  - type: text
+    name: title
+    label: Title
+    description: Helps with organization
+    config:
+      required: true
+  - type: textarea
+    label: Column Content
+    name: content
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - name: text_align
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Left
+      - center
+      - right
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Text Align
+    description: Change the column's text alignment.
+  - name: color_scheme
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: site-styles
+        file: data/styles.yaml
+        path: color_scheme_dropdown
+    label: Color Scheme
+- type: field_group
+  name: background_image
+  label: Background Image
+  fields:
+  - type: include
+    name: background_image
+    label: Background Image
+    template: data-image
+- type: field_group
+  name: block_options
+  label: Block Options
+  fields:
+  - type: include
+    template: field-block-options
+    label: Block Options
+    name: block_options

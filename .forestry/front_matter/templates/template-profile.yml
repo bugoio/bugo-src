@@ -1,0 +1,77 @@
+---
+label: Template - Profile
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: profile
+- type: include
+  template: field-page-attributes
+  label: Page Attributes
+  name: page_attributes
+- type: field_group
+  name: profile
+  label: Profile
+  fields:
+  - type: text
+    name: first_name
+    label: First Name
+    config:
+      required: true
+    description: Required.
+  - type: text
+    name: middle_name
+    label: Middle Name
+    description: Optional.
+  - type: text
+    name: last_name
+    label: Last Name
+    description: Required.
+    config:
+      required: true
+  - type: include
+    template: data-contact-info
+  - type: field_group
+    name: social_media
+    label: Social Media
+    description: Add social accounts for display on the profile.
+    fields:
+    - type: include
+      label: Social Accounts
+      template: data-social-accounts
+      name: social_accounts
+  - type: field_group
+    name: education
+    label: Education
+    fields:
+    - type: blocks
+      name: universities
+      label: Universities
+      template_types:
+      - field-university
+    - type: list
+      name: clerkships
+      label: Clerkships
+  - type: file
+    name: profile_image
+    label: Profile Image
+- type: field_group
+  name: video_gallery
+  label: Video Gallery
+  fields:
+  - type: include
+    name: videos
+    label: Videos
+    template: field-youtube-gallery
+- type: number
+  name: weight
+  label: Weight
+  description: Enter a weight for this page. The smaller the number the higher the
+    order.
+  default: '100'
+- type: include
+  name: taxonomy
+  label: Taxonomy
+  template: field-taxonomy

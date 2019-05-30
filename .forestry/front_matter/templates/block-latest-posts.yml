@@ -1,0 +1,49 @@
+---
+label: Block - Latest Posts
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Giving this block title will help organization.
+  config:
+    required: true
+- type: number
+  name: show_quantity
+  label: Show Quantity
+  config:
+    min: '1'
+    max: '10'
+  default: '1'
+- type: boolean
+  name: random
+  label: Random
+- name: show_featured_image
+  type: boolean
+  label: Show Featured Image
+  description: Show the post's featured image
+- name: show_summary
+  type: boolean
+  label: Show Summary
+  default: true
+  description: Check if you want to display a summary
+- name: show_read_more
+  type: boolean
+  label: Show Read More
+  description: Check to show a button that links to the post.
+  default: true
+- name: read_more_text
+  type: text
+  config:
+    required: false
+  label: Read More Text
+  default: Read More
+- type: field_group
+  name: block_options
+  label: Block Options
+  fields:
+  - type: include
+    template: field-block-options
+    label: Block Options
+    name: block_options

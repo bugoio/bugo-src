@@ -1,0 +1,69 @@
+---
+label: Config - Organization
+hide_body: true
+fields:
+- type: text
+  name: organization_name
+  label: organization_name
+- type: text
+  name: organization_description
+  label: organization_description
+- type: field_group
+  name: logos
+  label: Logos
+  fields:
+  - type: field_group
+    name: header_logo
+    label: Header Logo
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: file
+      name: image
+      label: image
+    - type: text
+      name: caption
+      label: caption
+    description: Add a header logo to this website.
+  - type: field_group
+    name: footer_logo
+    label: Footer Logo
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: file
+      name: image
+      label: image
+    - type: text
+      name: caption
+      label: caption
+    description: Add a footer logo to this website.
+  - type: file
+    name: seo_logo
+    label: SEO Logo
+    description: 'This image must be a .png file. '
+  - name: favicon
+    type: file
+    config:
+      maxSize: 250
+    label: Favicon
+    description: Add a favicon to your site. It should be 266 x 266.
+- type: field_group
+  name: contact_information
+  label: Contact Information
+  fields:
+  - type: include
+    name: contact_information
+    label: Contact Information
+    template: site-contact-information
+- type: textarea
+  name: footer_dislaimer
+  label: Footer Dislaimer
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+pages:
+- data/organization.yaml

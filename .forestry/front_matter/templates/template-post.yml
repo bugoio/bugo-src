@@ -1,0 +1,19 @@
+---
+label: Template Post
+hide_body: false
+fields:
+- type: text
+  label: Layout
+  name: layout
+  hidden: true
+  config:
+    required: true
+  default: post
+- type: include
+  template: field-page-attributes
+  label: Page Attributes
+  name: page_attributes
+- type: include
+  name: taxonomy
+  label: Taxonomy
+  template: field-taxonomy

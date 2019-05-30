@@ -1,0 +1,41 @@
+---
+label: Block - Slideshow
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Giving this block a title will help organization.
+  config:
+    required: true
+- type: blocks
+  name: slides
+  label: Slides
+  description: Add at least 1 slide.
+  template_types:
+  - data-image
+- type: field_group
+  name: block_options
+  label: Block Options
+  fields:
+  - name: image_ratio
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - '1:1'
+      - '4:3'
+      - '3:4'
+      - '16:9'
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Image Ratio
+  - type: include
+    template: field-block-options
+    label: Block Options
+    name: block_options

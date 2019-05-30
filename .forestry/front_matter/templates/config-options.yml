@@ -1,0 +1,115 @@
+---
+label: Config - Site Options
+hide_body: false
+fields:
+- type: boolean
+  name: show_breadcrumbs
+  label: Show Breadcrumbs
+  default: true
+- type: field_group
+  name: media
+  label: Media Options
+  fields:
+  - type: text
+    name: cloudinary_name
+    label: Cloudinary Cloud Name
+    description: 'If you are using Cloudinary.com for media, enter the cloud name
+      for your account. You can find it here: https://cloudinary.com/console'
+  - type: field_group
+    name: default_featured_image
+    label: Default Featured Image
+    fields:
+    - type: include
+      name: default_feature_image
+      label: Default Feature Image
+      template: data-image
+    - type: list
+      name: excluded_pages
+      label: Excluded Pages
+      description: These pages will not display the featured image block.
+      config:
+        use_select: true
+        source:
+          type: pages
+    - name: show_featured_image_in_content
+      type: boolean
+      label: Show Featured Image in Content
+      description: Pages and posts that have a featured image will display it under
+        the headline.
+    description: Use this image in the header when one hasn't been specified on a
+      post or page.
+- type: field_group
+  name: layout_options
+  label: Layout Options
+  description: Add specialized content and customize layout features.
+  fields:
+  - type: field_group
+    name: header
+    label: Header
+    description: Add content above the header that appears on every page. You could
+      use this for special promotions.
+    fields:
+    - type: blocks
+      name: blocks
+      label: Header Content
+      description: Add blocks to add content above the header.
+      template_types:
+      - block-columns
+    - name: color_scheme
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: documents
+          section: site-styles
+          file: data/styles.yaml
+          path: theme_color_schemes
+      label: Color Scheme
+      description: Select a color scheme for the header
+  - type: field_group
+    name: footer
+    label: Footer
+    description: Add content above the footer that appears on every page.
+    fields:
+    - type: blocks
+      name: pre_footer_blocks
+      label: Pre Footer Blocks
+      description: Add blocks to add content to the footer. This is useful if you
+        want to add content to every page above the footer.
+      template_types:
+      - block-columns
+      - block-slideshow
+      - block-latest-stories
+      - block-google-map
+    - name: footer_blocks
+      type: blocks
+      template_types:
+      - block-columns
+      - block-logos
+      config:
+        min: 
+        max: 
+      label: Footer Blocks
+      description: Use blocks to create your footer.
+- type: field_group
+  name: sidebar_widgets
+  label: Sidebar Widgets
+  fields:
+  - type: blocks
+    name: widgets
+    label: Widgets
+    template_types:
+    - widget-search-form
+    - widget-markdown
+    - widget-categories
+    - widget-menu
+    - widget-related-pages
+    - widget-latest-posts
+- type: list
+  name: site_categories
+  label: Site Categories
+  description: Add the categories for use with this site.
+pages:
+- data/config.yaml

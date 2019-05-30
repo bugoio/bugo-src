@@ -1,0 +1,30 @@
+---
+label: Template Page
+hide_body: false
+fields:
+- type: text
+  label: Layout
+  name: layout
+  hidden: true
+  config:
+    required: true
+  default: page
+- type: include
+  template: field-page-attributes
+  label: Page Attributes
+  name: page_attributes
+- type: field_group
+  name: video_gallery
+  label: Video Gallery
+  description: Add videos to this page.
+  fields:
+  - type: include
+    name: vidoes
+    label: Videos
+    template: field-youtube-gallery
+- type: include
+  name: taxonomy
+  label: Taxonomy
+  template: field-taxonomy
+pages:
+- content/sitemap.md
