@@ -1,6 +1,7 @@
 // jquery
 import $ from 'jquery';                           // jQuery - https://jquery.com
-import bootstrap from 'bootstrap';                // bootstrap - https://www.npmjs.com/package/bootstrap
+// bootstrap - https://www.npmjs.com/package/bootstrap
+import boostrap from "bootstrap";
 import LazyLoad from "vanilla-lazyload";          // lazy loader - https://www.npmjs.com/package/vanilla-lazyload
 import validator from 'validator';                // javascript form validator - https://www.npmjs.com/package/validator
 import YouTubePlayer from 'youtube-player';       // YouTube player - https://www.npmjs.com/package/youtube-player
@@ -10,12 +11,6 @@ import animateScrollTo from 'animated-scroll-to'; // Animate scroll to
 
 // require("../../static/assets/css/main.css");
 
-// Init LazyLoader
-const lazyLoadInstance = new LazyLoad({
-  elements_selector: ".lazy"
-  // ... more custom settings?
-});
-
 // Load fonts
 WebFont.load({
   google: {
@@ -23,43 +18,9 @@ WebFont.load({
   }
 });
 
-//Boostrap Carousel Slide Normalization
-
-function carouselNormalization() {
-  let items = $('.carousel .carousel-item'), //grab all slides
-      heights = [], //create empty array to store height values
-      tallest; //create variable to make note of the tallest slide
-
-  if (items.length) {
-      function normalizeHeights() {
-          items.each(function() { //add heights to array
-              heights.push($(this).height()); 
-          });
-          tallest = Math.max.apply(null, heights); //cache largest value
-          items.each(function() {
-              $(this).css('min-height',tallest + 'px');
-          });
-      };
-      normalizeHeights();
-
-      $(window).on('resize orientationchange', function () {
-          tallest = 0, heights.length = 0; //reset vars
-          items.each(function() {
-              $(this).css('min-height','0'); //reset min-height
-          }); 
-          normalizeHeights(); //run it again 
-      });
-  }
-}
-
-
 
 // On Document Ready
 $(document).ready(function () {
-
-  $('.off-canvas .collapse').on('show.bs.collapse', function () {
-    $('.off-canvas .show').not(this).collapse('hide');
-  })
 
   console.log($('a[href*="#"][role!="button"]'));
 
