@@ -19,6 +19,11 @@
   position: absolute !important;
   width: 1px !important;
   white-space: nowrap !important;            /* 3 */
+  background-color: $white;
+  color: $black;
+  a {
+    color: $black;
+  }
 }
 
 .sr-only-focusable:focus,
