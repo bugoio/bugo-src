@@ -34,3 +34,29 @@ body {
 .on-canvas {
   position: relative;
 }
+
+.skip-link-container {
+  background-color: $header-background-color;
+  text-align: center;
+}
+
+.skip-link {
+  @include sr-only;
+  @include sr-only-focusable;
+
+  &:focus {
+    display: inline-block;
+    position: relative;
+    // width: auto;
+    padding: $global-padding/4;
+    margin: $global-margin/2;
+  }
+}
+
+:focus {
+  outline-color: $primary;
+  outline-style: solid;
+  outline-width: thin;
+  outline-offset: 0;
+  z-index: 1000000000000;
+}
